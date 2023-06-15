@@ -1,82 +1,62 @@
 /* GENERAL STYLES */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background: url(forestimage.jpg) no-repeat center center/ cover;    
-    height: 100vh;
-    position: relative;
-}
-
-#open-btn {
-    background-color:#ffffff38;
-    border: 3px solid #fff;
-    border-radius: 15px;
-    box-shadow: 2px 5px 20px #000;
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: 70px;
-    position: absolute;
-    left: 20%;
-    top: 70%;
-    transition: .5s;
-    width: 350px;
-}
-
-#open-btn:hover {
-    background: #fff;
-    color: #000;
-}
-
-#modal {
-    background: #fff;
-    border-radius: 5px;
-    cursor: default;
+.container {
     display: flex;
+    flex-flow: column; 
+    height: 100vh;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    background-image: url(library2.jpg);
+    margin: auto;
+}
+
+.heading {
+    background: #262626;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    color: white;
     font-size: 1.5rem;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-
-    animation-name: animatemodal;
-    animation-duration: .4s;
+    width: 80%;
+    padding: 5px;
 }
 
-#modal-container {
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, .2);
+.main-content {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 10px;
+    height: 300px;
+    line-height: 2rem;
+    margin-top: 30px;
+    width: 80%;
 }
 
-#close-btn {
-    cursor: pointer;
-    font-size: 3rem;
+.main-content .text-area {
+    font-size: 1.5rem;
+    padding: 20px 25px;
 }
 
-#close-btn:active {
+.main-content .person {
     color: red;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
-/* Modal Animation */
-@keyframes animatemodal {
-    0% {
-        top: -300px;
-    }
-    100% {
-        top: 50%;
-        opacity: .2;
-    }
+.button-area button {
+    background: rgb(31, 30, 30);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    padding: 5px 20px;
+}
+
+.button-area button:active {
+    background-color: blue;
 }
