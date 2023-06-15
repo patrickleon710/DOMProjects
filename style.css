@@ -5,52 +5,66 @@
 }
 
 body {
-    background: url(stopwatchimage.jpg) no-repeat center center/ cover;
+    background: url(accordionimage.jpg) no-repeat center center/ cover;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    
+    align-items: center;
+    height: 100vh;    
 }
 
-.container {
+.accordion {
     background: #fff;
     border-radius: 30px;
-    height: 250px;
+    padding: 20px;
     width: 65%;
 }
 
-#timer {
-    font-size: 72px;
-    padding-top: 40px;
-    text-align: center;
-}
-
-.buttons {
-    padding-top: 40px;
-    text-align: center;
-}
-
-button {
-    border: none;
-    margin: 0 10px;   
-}
-
-button i {
-    color: #fff;
+.accordion .accordion-title {
     font-size: 2rem;
-    padding: 10px;
-    width: 50px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
-#play {
-    background: green;
+.accordion .content-container .question {
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    position: relative;
 }
 
-#pause {
-    background: orange;
+.accordion .content-container .question::after {
+    content: '+';
+
+    position: absolute;
+    right: -5px;
 }
 
-#reset {
-    background: red;
+.accordion .content-container .answer {
+    font-size: 22px;
+    line-height: 1.5;
+    padding-top: 15px;
+    width: 100%;
+
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+/* Javascript styling */
+.accordion .content-container.active .answer {
+    height: 150px;
+}
+
+.accordion .content-container.active .question {
+    font-size: 1rem;
+}
+
+.accordion .content-container.active .question::after {
+    content: '-';
+
+    font-size: 30px;
+    transition: .5s;
+    bottom: 5px;
 }
